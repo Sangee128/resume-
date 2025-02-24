@@ -1,0 +1,36 @@
+.custom-section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .custom-section-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .custom-section-input,
+  .custom-section-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .custom-section-remove-btn,
+  .custom-section-add-btn {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+  }
+  
+  .custom-section-remove-btn:hover,
+  .custom-section-add-btn:hover {
+    background: #0056b3;
+  }
+  

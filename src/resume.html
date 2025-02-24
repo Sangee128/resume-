@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Resume</title>
+
+    <!-- Box Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Download Button -->
+    <button id="download-btn">Download as PDF</button>
+
+    <main class="l-main">
+        <div class="resume" id="resume">
+            <!-- Left Column -->
+            <div class="resume__left">
+                <section class="home">
+                    <h1>John Doe</h1>
+                    <p>Email: johndoe@example.com | Phone: +1234567890</p>
+                </section>          
+
+                <section class="social section">
+                    <h2>Social Links</h2>
+                    <p><a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+                </section>
+
+                <section class="profile section">
+                    <h2>Profile</h2>
+                    <p>Experienced software developer specializing in frontend and backend development.</p>
+                </section>
+
+                <section class="education section">
+                    <h2>Education</h2>
+                    <p><strong>B.Tech in Computer Science</strong> - XYZ University (2023)</p>
+                </section>
+
+                <section class="skills section">
+                    <h2>Skills</h2>
+                    <ul>
+                        <li>React.js</li>
+                        <li>Node.js</li>
+                        <li>JavaScript</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="resume__right">
+                <section class="experience section">
+                    <h2>Experience</h2>
+                    <p>Software Developer - ABC Company (2022 - Present)</p>
+                </section>
+
+                <section class="certificate section">
+                    <h2>Certifications</h2>
+                    <p>AWS Certified Developer</p>
+                </section>
+
+                <section class="references section">
+                    <h2>References</h2>
+                    <p>Available upon request</p>
+                </section>
+
+                <section class="languages section">
+                    <h2>Languages</h2>
+                    <ul>
+                        <li>English (Fluent)</li>
+                        <li>Spanish (Intermediate)</li>
+                    </ul>
+                </section>
+
+                <section class="interests section">
+                    <h2>Interests</h2>
+                    <p>Coding, Blogging, Travelling</p>
+                </section>
+            </div>
+        </div>        
+    </main>
+
+    <!-- Load HTML2PDF Library -->
+   <!-- Load the html2pdf.js library -->
+<!-- Load HTML2PDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<!-- JavaScript for Downloading Resume Container Only -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("download-btn").addEventListener("click", function() {
+            const resumeElement = document.querySelector(".resume"); // Select only resume container
+
+            html2pdf()
+                .from(resumeElement)
+                .set({
+                    margin: 10,
+                    filename: 'resume.pdf',
+                    image: { type: 'jpeg', quality: 1.0 },
+                    html2canvas: {
+                        scale: 3, // High resolution
+                        dpi: 600, // Ensures high-quality PDF
+                        letterRendering: true,
+                        useCORS: true
+                    },
+                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                })
+                .save();
+        });
+    });
+</script>
+
+
+</body>
+</html>

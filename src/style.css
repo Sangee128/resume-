@@ -1,0 +1,78 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Download Button */
+#download-btn {
+    background: #0073e6;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+#download-btn:hover {
+    background: #005bb5;
+}
+
+/* Resume Layout */
+.resume {
+    width: 210mm;  /* A4 width */
+    height: 297mm; /* A4 height */
+    background: white;
+    
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    
+    overflow: hidden;
+}
+
+/* Left and Right Columns */
+
+/* Section Styling */
+section {
+   
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+p, ul li {
+    font-size: 14px;
+}
+
+/* Fix for Printing */
+@media print {
+    body {
+        background: none;
+    }
+
+    .resume {
+        box-shadow: none;
+    }
+}
+

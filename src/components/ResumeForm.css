@@ -1,0 +1,36 @@
+.resume-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.selection-screen button {
+  margin: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+.form-container {
+  width: 50%;
+  margin: auto;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  padding: 8px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.navigation-buttons {
+  margin-top: 20px;
+}

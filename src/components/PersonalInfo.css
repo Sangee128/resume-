@@ -1,0 +1,15 @@
+.personal-info {
+    display: flex;
+   align-items: center;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .personal-info input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
